@@ -1,10 +1,10 @@
-import { ThemeProvider, createBox, createText } from '@shopify/restyle';
+import { ThemeProvider, createBox } from '@shopify/restyle';
 
+import { Text } from '@/components/common/Text';
 import theme, { TTheme } from '@/theme';
 
 export default function App() {
 	const Box = createBox<TTheme>();
-	const Text = createText<TTheme>();
 	return (
 		<ThemeProvider theme={theme}>
 			<Box
@@ -12,10 +12,9 @@ export default function App() {
 				flex={1}
 				justifyContent="center"
 				alignItems="center">
-				<Text color="zincLightest" variant="pageTitle">
+				<Text preset="danger" variant="sectionTitle">
 					Home
 				</Text>
-				<Text color="zincLightest">Description</Text>
 			</Box>
 		</ThemeProvider>
 	);
