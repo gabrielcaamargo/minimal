@@ -16,7 +16,7 @@ const RText = createText<TTheme>();
 export function Text({
 	children,
 	preset = 'default',
-	variant = 'commonTitle',
+	variant = 'commonText',
 	...rest
 }: ITextProps) {
 	return (
