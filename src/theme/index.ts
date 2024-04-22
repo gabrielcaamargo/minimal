@@ -60,6 +60,8 @@ const palette = {
 	emeraldBlack: '#065f46',
 	emeraldDarkestBlack: '#064e3b',
 	emeraldBlackest: '#022c22',
+
+	transparent: 'transparent',
 };
 const theme = createTheme({
 	colors: palette,

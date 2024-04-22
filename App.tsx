@@ -12,7 +12,7 @@ export default function App() {
 				flex={1}
 				justifyContent="center"
 				alignItems="center">
-				<Button title="Button" />
+				<Button title="Button" preset="outline" variant="success" />
 			</Box>
 		</ThemeProvider>
 	);

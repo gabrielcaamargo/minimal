@@ -16,12 +16,7 @@ describe('Button', () => {
 			it('should be disabled if prop disabled is true', () => {
 				const onPressMock = jest.fn();
 				const { getByTestId } = renderWithProviders(
-					<Button
-						title="Button"
-						testID="button"
-						disabled
-						onPress={onPressMock}
-					/>,
+					<Button title="Button" disabled onPress={onPressMock} />,
 				);
 
 				const component = getByTestId('button');
@@ -32,7 +27,7 @@ describe('Button', () => {
 		describe('Preset', () => {
 			it('should receive a preset', () => {
 				const { getByTestId } = renderWithProviders(
-					<Button title="Button" preset="outline" testID="button" />,
+					<Button title="Button" preset="outline" />,
 				);
 
 				const component = getByTestId('button');
@@ -43,13 +38,49 @@ describe('Button', () => {
 			});
 
 			it('should apply a default preset if it is not passed', () => {
-				const { getByTestId } = renderWithProviders(
-					<Button title="Button" testID="button" />,
-				);
+				const { getByTestId } = renderWithProviders(<Button title="Button" />);
 
 				const component = getByTestId('button');
 				expect(component.props.style[0].backgroundColor).toBe(
 					theme.colors.indigoDark,
+				);
+			});
+		});
+
+		describe('Variant', () => {
+			it('should receive a variant', () => {
+				const { getByTestId } = renderWithProviders(
+					<Button title="Button" variant="success" />,
+				);
+
+				const component = getByTestId('button');
+				expect(component.props.style[0].backgroundColor).toBe(
+					theme.colors.emeraldDark,
+				);
+			});
+
+			it('should apply a default variant if it is not passed', () => {
+				const { getByTestId } = renderWithProviders(<Button title="Button" />);
+
+				const component = getByTestId('button');
+				expect(component.props.style[0].backgroundColor).toBe(
+					theme.colors.indigoDark,
+				);
+			});
+		});
+
+		describe('Preset using variants', () => {
+			it('should receive a preset and a variant', () => {
+				const { getByTestId } = renderWithProviders(
+					<Button title="Button" preset="outline" variant="success" />,
+				);
+
+				const component = getByTestId('button');
+				expect(component.props.style[0].backgroundColor).toBe(
+					theme.colors.transparent,
+				);
+				expect(component.props.style[0].borderColor).toBe(
+					theme.colors.emeraldDark,
 				);
 			});
 		});
