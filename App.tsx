@@ -1,6 +1,6 @@
 import { ThemeProvider, createBox } from '@shopify/restyle';
 
-import { Text } from '@/components/common/Text';
+import { Button } from '@/components/common/Button';
 import theme, { TTheme } from '@/theme';
 
 export default function App() {
@@ -12,9 +12,7 @@ export default function App() {
 				flex={1}
 				justifyContent="center"
 				alignItems="center">
-				<Text preset="danger" variant="sectionTitle">
-					Home
-				</Text>
+				<Button title="Button" />
 			</Box>
 		</ThemeProvider>
 	);

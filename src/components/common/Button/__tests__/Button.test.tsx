@@ -1,6 +1,5 @@
 import { fireEvent } from '@testing-library/react-native';
 
-import { Text } from '../../Text';
 import { Button } from '../index';
 
 import theme from '@/theme';
@@ -8,12 +7,8 @@ import { renderWithProviders } from '@/utils/renderWithProviders';
 
 describe('Button', () => {
 	describe('Render', () => {
-		it('should render children', () => {
-			renderWithProviders(
-				<Button>
-					<Text>Test</Text>
-				</Button>,
-			);
+		it('should render', () => {
+			renderWithProviders(<Button title="Button" />);
 		});
 	});
 	describe('Props', () => {
@@ -21,9 +16,12 @@ describe('Button', () => {
 			it('should be disabled if prop disabled is true', () => {
 				const onPressMock = jest.fn();
 				const { getByTestId } = renderWithProviders(
-					<Button testID="button" disabled onPress={onPressMock}>
-						<Text>Test</Text>
-					</Button>,
+					<Button
+						title="Button"
+						testID="button"
+						disabled
+						onPress={onPressMock}
+					/>,
 				);
 
 				const component = getByTestId('button');
@@ -34,9 +32,7 @@ describe('Button', () => {
 		describe('Preset', () => {
 			it('should receive a preset', () => {
 				const { getByTestId } = renderWithProviders(
-					<Button preset="outline" testID="button">
-						<Text>Test</Text>
-					</Button>,
+					<Button title="Button" preset="outline" testID="button" />,
 				);
 
 				const component = getByTestId('button');
@@ -48,9 +44,7 @@ describe('Button', () => {
 
 			it('should apply a default preset if it is not passed', () => {
 				const { getByTestId } = renderWithProviders(
-					<Button testID="button">
-						<Text>Test</Text>
-					</Button>,
+					<Button title="Button" testID="button" />,
 				);
 
 				const component = getByTestId('button');

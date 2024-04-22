@@ -81,6 +81,23 @@ const theme = createTheme({
 		'11xl': 30,
 		'12xl': 32,
 	},
+	borderRadii: {
+		sm: 4,
+		md: 6,
+		lg: 8,
+		xl: 10,
+		'2xl': 12,
+		'3xl': 14,
+		'4xl': 16,
+		'5xl': 18,
+		'6xl': 20,
+		'7xl': 22,
+		'8xl': 24,
+		'9xl': 26,
+		'10xl': 28,
+		'11xl': 30,
+		'12xl': 32,
+	},
 	textVariants: {
 		commonText: {
 			fontFamily: 'OpenSans-Regular',
