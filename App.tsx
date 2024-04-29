@@ -1,6 +1,6 @@
 import { ThemeProvider, createBox } from '@shopify/restyle';
 
-import { Button } from '@/components/common/Button';
+import { TextInput } from '@/components/common/TextInput';
 import theme, { TTheme } from '@/theme';
 
 export default function App() {
@@ -12,7 +12,7 @@ export default function App() {
 				flex={1}
 				justifyContent="center"
 				alignItems="center">
-				<Button title="Button" preset="outline" variant="success" />
+				<TextInput placeholder="Component" />
 			</Box>
 		</ThemeProvider>
 	);

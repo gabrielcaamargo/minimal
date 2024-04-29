@@ -1,5 +1,9 @@
-import { TextInput as RNTextInput } from 'react-native';
+import { TextInput as RNTextInput, TextInputProps } from 'react-native';
 
-export function TextInput() {
-	return <RNTextInput />;
+interface ITextInputProps extends TextInputProps {
+	placeholder: string;
+}
+
+export function TextInput({ placeholder }: ITextInputProps) {
+	return <RNTextInput placeholder={placeholder} />;
 }

@@ -7,7 +7,7 @@ import { renderWithProviders } from '@/utils/renderWithProviders';
 describe('TextInput', () => {
 	describe('Render', () => {
 		it('should render correctly', () => {
-			renderWithProviders(<TextInput />);
+			renderWithProviders(<TextInput placeholder="Placeholder" />);
 		});
 	});
 
