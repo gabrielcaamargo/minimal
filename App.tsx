@@ -12,7 +12,7 @@ export default function App() {
 				flex={1}
 				justifyContent="center"
 				alignItems="center">
-				<TextInput placeholder="Component" />
+				<TextInput placeholder="Component" label="Label" />
 			</Box>
 		</ThemeProvider>
 	);

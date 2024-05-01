@@ -101,6 +101,10 @@ const theme = createTheme({
 		'12xl': 32,
 	},
 	textVariants: {
+		smallText: {
+			fontFamily: 'OpenSans-Regular',
+			fontSize: 12,
+		},
 		commonText: {
 			fontFamily: 'OpenSans-Regular',
 			fontSize: 16,
