@@ -1,6 +1,5 @@
 import { ThemeProvider, createBox } from '@shopify/restyle';
 
-import { TextInput } from '@/components/common/TextInput';
 import theme, { TTheme } from '@/theme';
 
 export default function App() {
@@ -11,9 +10,8 @@ export default function App() {
 				bg="zincBlackest"
 				flex={1}
 				justifyContent="center"
-				alignItems="center">
-				<TextInput placeholder="Component" label="Label" />
-			</Box>
+				alignItems="center"
+			/>
 		</ThemeProvider>
 	);
 }
