@@ -1,17 +1,15 @@
-import { ThemeProvider, createBox } from '@shopify/restyle';
+import { NavigationContainer } from '@react-navigation/native';
+import { ThemeProvider } from '@shopify/restyle';
 
-import theme, { TTheme } from '@/theme';
+import { Routes } from '@/routes';
+import theme from '@/theme';
 
 export default function App() {
-	const Box = createBox<TTheme>();
 	return (
-		<ThemeProvider theme={theme}>
-			<Box
-				bg="zincBlackest"
-				flex={1}
-				justifyContent="center"
-				alignItems="center"
-			/>
-		</ThemeProvider>
+		<NavigationContainer>
+			<ThemeProvider theme={theme}>
+				<Routes />
+			</ThemeProvider>
+		</NavigationContainer>
 	);
 }
